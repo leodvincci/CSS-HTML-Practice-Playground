@@ -1,0 +1,225 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: seashell;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+    color: #c9c9c9;
+}
+
+
+
+#my-grid-container{
+    display: grid;
+    border-radius: 30px;
+    background-color: #0D4740;
+    width: 90%;
+    height: 90%;
+    grid-template-columns: minmax(150px,17%)minmax(700px,auto) minmax(150px,17%);
+    box-shadow: 10px 10px 80px rgba(62, 62, 82, 0.23);
+
+}
+
+
+#nav{
+    display: grid;
+    grid-auto-rows: 20rem;
+    width: auto;
+    /*background-color: #D7E3DF;*/
+
+    background-color: #124d85;
+    border-radius: 2px 3px 2px 20px;
+
+}
+
+#main{
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    background-color: #f6f6f6;
+
+    grid-template-areas:
+            "Announcements     Announcements          Announcements"
+            "Courses          Courses               Courses"
+            "Classmates       Classmates            Classmates";
+
+    gap: 20px;
+}
+
+#sidebar{
+
+    background-color: #124d85;
+    border-radius: 3px 20px 20px 2px;
+
+
+}
+
+
+
+
+
+
+
+
+#student-info{
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+
+}
+
+#student-info #student-name{
+    margin: 0;
+    padding-top: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-self: center;
+    color: #ffffff;
+}
+
+#student-info p{
+    margin:0;
+}
+
+#student-info-more{
+
+}
+
+#student-info-more > ul > li{
+    display: grid;
+    padding-top: 2rem;
+    grid-template-columns: 3rem 1fr;
+    align-items: center;
+    justify-items: start;
+    font-size: 1.3rem;
+    transition-duration: 200ms;
+}
+
+#student-info-more > ul > li:hover {
+    color: #00b0a3;
+    cursor: pointer;
+}
+
+#student-info-more > ul > li:active {
+    color: #2b3434;
+    cursor: pointer;
+}
+
+#student-info-more{
+    padding-top: 3rem;
+}
+
+#student-info #prof-pic{
+    align-self: center;
+}
+
+
+#nav img{
+    box-sizing: border-box;
+    /*display: inline-block;*/
+
+    width: 5rem;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 10px 10px 80px rgba(44, 43, 43, 0.47);
+
+}
+
+
+
+
+#announcements{
+    block-size: border-box;
+    height: 50%;
+    width: 60%;
+    grid-area: Announcements;
+    border-radius: 22px;
+    /*background: linear-gradient(90deg, rgb(18, 77, 132) 0%, rgb(255, 7, 7) 100%) rgb(63, 63, 213) 35%;*/
+    /*background: linear-gradient( to left, #03598d, rgb(63, 63, 213));*/
+    background-color: rgba(239, 239, 239, 0.82);
+    align-self: center;
+    justify-self: center;
+
+}
+
+#announcements p{
+    text-shadow: 1px 2px #1d2024;
+    margin: 10px;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ff4444;
+    font-weight: 600;
+    font-family: "Poppins";
+
+}
+
+
+
+
+#courses{
+    height: 60%;
+    width: 80%;
+    border-radius: 22px;
+    /*background: linear-gradient(90deg, rgb(18, 77, 132) 0%, rgb(255, 7, 7) 100%) rgb(63, 63, 213) 35%;*/
+    /*background: linear-gradient( to left, #03598d, rgb(63, 63, 213));*/
+    background-color: rgb(41, 41, 154);
+    align-self: center;
+    justify-self: center;
+    grid-column: 1 / span 1;
+    box-sizing: border-box;
+
+
+
+}
+#courses-2{
+    height: 70%;
+    width: 80%;
+    border-radius: 22px;
+    /*background: linear-gradient(90deg, rgb(18, 77, 132) 0%, rgb(255, 7, 7) 100%) rgb(63, 63, 213) 35%;*/
+    /*background: linear-gradient( to left, #03598d, rgb(63, 63, 213));*/
+    background-color: rgba(239, 239, 239, 0.82);
+    align-self: center;
+    justify-self: center;
+    grid-column: 2 / span 1;
+
+
+}
+
+#courses-3{
+    height: 60%;
+    width: 80%;
+    border-radius: 22px;
+    /*background: linear-gradient(90deg, rgb(18, 77, 132) 0%, rgb(255, 7, 7) 100%) rgb(63, 63, 213) 35%;*/
+    /*background: linear-gradient( to left, #03598d, rgb(63, 63, 213));*/
+    background-color: rgb(41, 41, 154);
+    align-self: center;
+    justify-self: center;
+
+}
+
+
+#classmates{
+
+    grid-area: Classmates;
+    height: 80%;
+    width: 90%;
+    border-radius: 22px;
+    /*background: linear-gradient(90deg, rgb(18, 77, 132) 0%, rgb(255, 7, 7) 100%) rgb(63, 63, 213) 35%;*/
+    /*background: linear-gradient( to left, #03598d, rgb(63, 63, 213));*/
+    background-color: rgba(239, 239, 239, 0.82);
+    align-self: center;
+    justify-self: center;
+    grid-column: 1 / span 4;
+
+}
+
+
+

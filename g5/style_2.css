@@ -1,0 +1,472 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.11);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+    color: rgb(84, 83, 83);
+}
+
+
+
+#my-grid-container{
+    display: grid;
+    border-radius: 30px;
+    background-color: #0D4740;
+    width: 90%;
+    height: 90%;
+    grid-template-columns: minmax(150px,17%)minmax(700px,auto) minmax(150px,17%);
+
+    box-shadow: 10px 10px 80px rgba(62, 62, 82, 0.23);
+
+}
+
+
+#nav{
+    display: grid;
+    grid-auto-rows: 20rem;
+    width: auto;
+    /*background-color: #D7E3DF;*/
+
+    background-color: #fdfdfd;
+    border-radius: 20px 3px 2px 20px;
+
+}
+
+#main{
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-rows: 30%;
+    background-color: #f4f4f4;
+    grid-template-areas:
+            "Announcements     Announcements     Announcements     Announcements"
+            "Courses          Courses       Courses        Courses"
+            "Classmates       Classmates    Classmates        Classmates";
+
+}
+
+#main h2{
+    margin: 16px;
+    grid-row: 3 /span 1;
+    grid-column: 1 /span 1;
+    align-self: end;
+    padding-left: 2.5rem;
+
+}
+
+#main #course-title{
+    margin: 16px;
+    grid-row: 2 /span 1;
+    grid-column: 1 /span 1;
+    align-self: end;
+    padding-left: 2.5rem;
+    padding-bottom: 16px;
+
+}
+
+#sidebar{
+    text-align: center;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    background-color: #fdfdfd;
+    border-radius: 3px 20px 20px 2px;
+}
+
+#sidebar p{
+    margin: 1rem;
+}
+
+
+
+#sidebar #due-list{
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    background-color: rgba(255, 255, 255, 0.22);
+    grid-row: 1 / span 2;
+    align-self: center;
+    justify-self: center;
+    color: #ff4444;
+    font-size: .8rem;
+}
+
+
+#upcoming-due{
+    grid-column: 1 / span 2;
+}
+
+#due-list .class-tag{
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: .7rem;
+    align-self: center;
+    background-color: #e7e7e7;
+    background-color: #e7e7e7;
+    border-radius: .4rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #068875;
+
+}
+
+
+
+
+
+
+
+#student-info{
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 4rem;
+
+}
+
+#student-info #student-name{
+    margin: 0;
+    padding-top: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-self: center;
+    color: #00b0a3;
+}
+
+#student-info p{
+    margin:0;
+}
+
+
+#student-info-more ul{
+    box-sizing: border-box;
+}
+
+#student-info-more > ul > li{
+    box-sizing: border-box;
+
+    display: grid;
+    margin-top: 2rem;
+
+    grid-template-columns: 35px 2fr;
+    align-items: center;
+    justify-items: start;
+    font-size: 1.3rem;
+    transition-duration: 200ms;
+}
+
+
+
+#student-info-more > ul > li:hover {
+    box-sizing: border-box;
+    color: #00b0a3;
+    width: 100%;
+    padding: 2px;
+    border-radius: 50px;
+    background-color: rgba(201, 201, 201, 0.26);
+    cursor: pointer;
+}
+
+#student-info-more > ul > li:active {
+    color: #2b3434;
+    cursor: pointer;
+}
+
+#student-info-more{
+    padding-top: 3rem;
+}
+
+#student-info #prof-pic{
+    align-self: center;
+}
+
+
+#nav img{
+    box-sizing: border-box;
+    /*display: inline-block;*/
+
+    width: 5rem;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 10px 10px 80px rgba(44, 43, 43, 0.47);
+
+}
+
+
+
+
+#announcements{
+    /*background-image: url("engin-akyurt-epgqiRNfNHw-unsplash.jpg");*/
+    /*background-size: cover;*/
+    block-size: border-box;
+    height: 40%;
+    width: 60%;
+    grid-area: Announcements;
+    border-radius: 22px;
+    /*background: linear-gradient(90deg, rgb(18, 77, 132) 0%, rgb(255, 7, 7) 100%) rgb(63, 63, 213) 35%;*/
+    /*background: linear-gradient( to left, #03598d, rgb(63, 63, 213));*/
+    background-color: rgba(239, 239, 239, 0.82);
+    align-self: center;
+    justify-self: center;
+
+}
+
+#announcements p{
+    margin: 28px;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #ff4444;
+
+    font-weight: 600;
+    font-family: "Poppins";
+
+}
+
+#course-a{
+    background: rgb(49,178,144);
+    background: linear-gradient(90deg, rgba(49,178,144,1) 35%, rgb(1, 175, 162) 100%);     height: 35%;
+
+
+    width: 30%;
+    border-radius: 30px;
+    /*background: linear-gradient(90deg, rgb(18, 77, 132) 0%, rgb(255, 7, 7) 100%) rgb(63, 63, 213) 35%;*/
+    /*background: linear-gradient( to left, #03598d, rgb(63, 63, 213));*/
+    justify-self: center;
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    align-self: start;
+    align-self: end;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+
+}
+
+#course-b{
+    background: rgb(49,178,144);
+    background: linear-gradient(90deg, rgba(49,178,144,1) 35%, rgb(1, 175, 162) 100%);     height: 35%;
+
+
+    width: 30%;
+    border-radius: 30px;
+    /*background: linear-gradient(90deg, rgb(18, 77, 132) 0%, rgb(255, 7, 7) 100%) rgb(63, 63, 213) 35%;*/
+    /*background: linear-gradient( to left, #03598d, rgb(63, 63, 213));*/
+    justify-self: center;
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+    align-self: start;
+    align-self: end;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+
+}
+
+#course-c{
+    background: rgb(49,178,144);
+    background: linear-gradient(90deg, rgba(49,178,144,1) 35%, rgb(1, 175, 162) 100%);     height: 35%;
+
+
+    width: 30%;
+    border-radius: 30px;
+    /*background: linear-gradient(90deg, rgb(18, 77, 132) 0%, rgb(255, 7, 7) 100%) rgb(63, 63, 213) 35%;*/
+    /*background: linear-gradient( to left, #03598d, rgb(63, 63, 213));*/
+    justify-self: center;
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 1;
+    align-self: end;
+    margin-bottom: 50px;
+
+    box-sizing: border-box;
+
+}
+
+
+#courses{
+    background: rgb(49,178,144);
+    background: linear-gradient(90deg, rgba(49,178,144,1) 35%, rgb(1, 175, 162) 100%);     height: 35%;
+
+
+    width: 30%;
+    border-radius: 30px;
+    /*background: linear-gradient(90deg, rgb(18, 77, 132) 0%, rgb(255, 7, 7) 100%) rgb(63, 63, 213) 35%;*/
+    /*background: linear-gradient( to left, #03598d, rgb(63, 63, 213));*/
+    justify-self: center;
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+    align-self: start;
+
+    box-sizing: border-box;
+
+}
+
+#courses p, #courses-2 p, #courses-3 p, #course-a p, #course-b p, #course-c p{
+    margin-top: 1.4rem;
+    text-align: center;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+#courses :hover, #courses-2 :hover, #courses-3 :hover , #course-a :hover , #course-b :hover , #course-c :hover {
+    color: #ff885c;
+    cursor: pointer;
+
+}
+#courses :active, #courses-2 :active, #courses-3 :active , #course-a :active , #course-b :active , #course-c :active {
+    color: rgba(253, 68, 68, 0.26);
+
+}
+
+#courses-2{
+
+    width: 30%;
+    border-radius: 30px;
+    background: rgb(49,178,144);
+    background: linear-gradient(90deg, rgba(49,178,144,1) 35%, rgb(1, 175, 162) 100%);
+    height: 35%;
+    background-size: cover;
+    justify-self: center;
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 1;
+    align-self: start;
+
+}
+
+#courses-3{
+    width: 30%;
+    background: rgb(49,178,144);
+    background: linear-gradient(90deg, rgba(49,178,144,1) 35%, rgb(1, 175, 162) 100%);     height: 35%;
+    border-radius: 30px;
+    /*background: linear-gradient(90deg, rgb(18, 77, 132) 0%, rgb(255, 7, 7) 100%) rgb(63, 63, 213) 35%;*/
+    /*background: linear-gradient( to left, #03598d, rgb(63, 63, 213));*/
+    background-color: rgb(49, 178, 144);
+    align-self: start;
+    justify-self: center;
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 1;
+
+}
+
+
+#classmates{
+
+    block-size: border-box;
+    font-size: 1rem;
+    color: #068875;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /*background-image: url("marjan-blan-marjanblan-_kUxT8WkoeY-unsplash.jpg");*/
+    /*background-size: cover;*/
+    height: 75%;
+    width: 85%;
+    border-radius: 25px;
+    font-weight: 600;
+    transition-duration: 300ms;
+
+    background-color: white;
+    box-shadow: 3px 3px 80px rgba(83, 83, 84, 0.44);
+    justify-self: end;
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+    align-self: start;
+
+}
+
+#classmates_2{
+    color: #068875;
+    font-weight: 600;
+    transition-duration: 300ms;
+
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /*background-image: url("marjan-blan-marjanblan-_kUxT8WkoeY-unsplash.jpg");*/
+    /*background-size: cover;*/
+    height: 75%;
+    width: 42%;
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: 3px 3px 80px rgba(83, 83, 84, 0.44);
+    justify-self: center;
+    align-self: start;
+    grid-column: 2 / span 2;
+    grid-row: 4 / span 1;
+
+}
+
+
+
+
+#classmates_3{
+    transition-duration: 300ms;
+    font-size: 1rem;
+    color: #068875;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    /*background-image: url("marjan-blan-marjanblan-_kUxT8WkoeY-unsplash.jpg");*/
+    /*background-size: cover;*/
+    height: 75%;
+    width: 80%;
+    border-radius: 25px;
+
+    align-self: start;
+    justify-self: start;
+    grid-column: 4 / span 1;
+    grid-row: 4 / span 1;
+
+    background-color: white;
+    box-shadow: 3px 3px 80px rgba(83, 83, 84, 0.44);
+
+}
+
+#classmates img{
+    margin-top: 12px;
+    align-self: center;
+    border-radius: 50%;
+    width: 6rem;
+    border: #ff4444 4px dotted;
+}
+#classmates_2 img{
+    margin-top: 12px;
+    align-self: center;
+    border-radius: 50%;
+    width: 6rem;
+    border: #ff4444 4px dotted;
+
+}
+#classmates_3 img{
+    margin-top: 12px;
+    align-self: center;
+    border-radius: 50%;
+    border-radius: 50%;
+    width: 6rem;
+    border: #ff4444 4px dotted;
+
+}
+
+#classmates_3:hover, #classmates_2:hover, #classmates:hover{
+    cursor: pointer;
+    background-color: rgb(43, 52, 52);
+
+}
+#classmates_3:active, #classmates_2:active, #classmates:active{
+    background-color: rgb(67, 73, 73);
+
+}
+
+
+
+
+
