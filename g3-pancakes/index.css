@@ -1,0 +1,46 @@
+body{
+    background-color: #2e4d4d;
+    margin: 0;
+}
+
+#my-grid-layout{
+    display: grid;
+    width: 100vw;
+    height: 60rem;
+    grid-template: 15% 70% 15% / 1fr 1fr 1fr;
+
+}
+
+
+
+
+
+
+
+
+
+
+nav{
+
+    background-color: seashell;
+    grid-row: 1 / spans 4;
+    grid-column: 1 / span 3;
+
+
+
+}
+
+main{
+    background-color: darkslategrey;
+    grid-column: 1 /span 4;
+    grid-row: 2 / span 4;
+
+
+}
+
+footer{
+    background-color: seashell;
+    grid-column: 1 /span 4;
+    grid-row: 3 / span 4 ;
+
+}

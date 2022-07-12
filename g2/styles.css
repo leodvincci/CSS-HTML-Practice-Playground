@@ -1,0 +1,132 @@
+p{
+    margin: 0;
+}
+body{
+    background-color: gainsboro;
+}
+
+#my-grid-container {
+    color: white;
+    text-align: center;
+    margin-top: 180px;
+    display: grid;
+    grid-template: auto 1fr auto/ auto 1fr auto;
+    /*border: darkslategrey 1px solid;*/
+    row-gap: 2rem;
+    column-gap: 2.5rem;
+    justify-content: center;
+    font-family: "Press Start 2P";
+    font-size: 2rem;
+
+}
+
+#p1{
+    background-color: crimson;
+    border-radius: 15px;
+    flex-direction: column;
+    padding: 3rem;
+    grid-column: 2 / span 2  ;
+    grid-row-start: 1 ;
+    grid-row-end: 3;
+
+}
+#p2{
+    background-color: gold;
+    border-radius: 15px;
+    padding: 3rem;
+    grid-row: 1 / span 10;
+
+}
+#p3{
+    background-color: purple;
+    border-radius: 15px;
+    padding: 3rem;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 10;
+
+}
+#p4{
+    background-color: blue;
+    border-radius: 15px;
+    padding: 3rem;
+
+}
+#p5{
+    background-color: darkslateblue;
+    border-radius: 15px;
+    padding: 3rem;
+
+}
+#p6{
+    background-color: magenta;
+    border-radius: 15px;
+    padding: 3rem;
+
+}
+#p7{
+    background-color: darkslategrey;
+    border-radius: 15px;
+    padding: 3rem;
+
+}
+#p8{
+    background-color: indianred;
+    border-radius: 15px;
+    padding: 3rem;
+
+}
+#p9{
+    background-color: darkblue;
+    border-radius: 15px;
+    padding: 3rem;
+
+}
+
+#p9:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.11);
+    font-size: 30px;
+}
+#p1:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.11);
+    font-size: 30px;
+
+}
+#p2:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.11);
+    font-size: 30px;
+
+}
+#p3:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.11);
+    font-size: 30px;
+}
+#p4:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.11);
+    font-size: 30px;
+}
+#p5:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.11);
+    font-size: 30px;
+}
+#p6:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.11);
+    font-size: 30px;
+}
+#p7:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.11);
+    font-size: 30px;
+}
+#p8:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.11);
+    font-size: 30px;
+}
