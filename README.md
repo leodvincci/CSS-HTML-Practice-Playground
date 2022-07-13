@@ -9,7 +9,3 @@
 
 
 
-
-
-# Debugging Duck Marketplace
-![](ducki/Screenshot_20220712_110227.png)
